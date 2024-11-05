@@ -14,7 +14,8 @@ import java.time.Instant;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity(name = "revision_info")
+@Entity
+@Table(name = "revision_info", schema = "audit")
 @RevisionEntity(RevisionInfoInterceptor.class)
 public class RevisionInfo {
 
