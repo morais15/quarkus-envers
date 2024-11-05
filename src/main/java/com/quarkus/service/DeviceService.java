@@ -31,7 +31,7 @@ public class DeviceService {
 
         Device.persist(deviceSaved);
 
-        return device;
+        return deviceSaved;
     }
 
     public List<Device> findAll() {

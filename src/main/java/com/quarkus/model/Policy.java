@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.hibernate.envers.Audited;
+import org.hibernate.envers.DefaultRevisionEntity;
+import org.hibernate.envers.DefaultRevisionEntity_;
 
 import java.util.UUID;
 
@@ -16,19 +18,15 @@ import java.util.UUID;
 @Entity
 @Data
 @Audited
-public class Device extends PanacheEntityBase {
+public class Policy extends PanacheEntityBase {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    @Column
     private UUID id;
 
     @Column
     private String name;
 
     @Column
-    private String model;
-
-    @Column
-    private String manufacturer;
+    private String type;
 }
